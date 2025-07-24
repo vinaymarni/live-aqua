@@ -1,0 +1,60 @@
+
+.BackgroundVedioTest2Con{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+}
+
+.BackgroundVedioTest2Video{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #000000;
+}
+
+.HomePageMainCon{
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.loginMainCon {
+    display: flex;
+    /* background: #1f293a; */
+    min-height: 100vh;
+    position: relative;
+    width: 100%;
+    align-items: center;
+    flex-direction: column;
+} 
+ 
+.container {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    z-index: 1;
+    background-color: rgba(255, 255, 255, 0.01);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.loginBackgroundVedio{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #000000;
+    z-index: 0;
+    object-fit:fill;
+    pointer-events: none;
+    background-size: cover;
+}
