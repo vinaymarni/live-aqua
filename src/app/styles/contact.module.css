@@ -1,0 +1,52 @@
+.socialMediaIconCon{
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+}
+
+.iconsHoldingCon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 100%;
+    gap: 1rem;
+    position: relative;
+    top: -50px;
+}
+
+.socialMediaIconCon svg{
+    height: 80px;
+    width: 80px;
+}
+
+.socialMediaIconCon:hover{
+   box-shadow: 0 0 12px rgba(0, 0, 0, 0.6);
+   box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+}
+
+.phoneIcon{
+    max-height: 70px;
+    max-width: 70px;
+}
+
+.contactBannerImageCon{
+    width: 100%;
+    height: 340px;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.contactBannerImageCon h1{
+    color: white;
+    font-size: 60px;
+}

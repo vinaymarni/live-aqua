@@ -28,7 +28,7 @@
     ".next/types/**/*.ts",
     "**/*.ts",
     "**/*.tsx"
-, "src/app/layouts/primary/index.js"  ],
+, "src/app/layouts/primary/index.js", "src/app/shop/[shop]/page.js"  ],
   "exclude": [
     "node_modules"
   ]

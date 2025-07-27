@@ -11,5 +11,4 @@ const pageReducer = (prev, action) => {
   }
 };
 
-// ✅ CORRECT — pass initial state, not an atom
 export const pageDataStore = atomWithReducer(initialPageState, pageReducer);
