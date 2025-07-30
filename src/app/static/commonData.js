@@ -220,10 +220,11 @@ export const getItemDetails = new Map([
             name: "Gold Fish", 
             desc: "Livebearers give birth to live, free-swimming baby fish instead of laying eggs. They are easy to breed, making them ideal for beginners. Popular species include guppies, mollies, platies, and swordtails.",
             title:"Fishes", 
+            type: "non Live Bearer",
             coverImage: "/aquaFish.jpg",
             images: ["/aquaFish.jpg"],
             videos: ["/fishes.mp4"],
-            gender: "M",
+            availableGender: "B", // "M" OR "F" or "B"
             totalCount: 120,
             minPrice: 10,
             maxPrice: 300,
@@ -241,7 +242,7 @@ export const getItemDetails = new Map([
                 "Seperate this fish with Livebearers(like Fighter fish and Mollys...)"
             ],
             requirements: [
-                "Oxigen", "Natural Plants", "LED Lamp"
+                "Oxigen", "Natural Plants", "LED Lamp", "Water purifier"
             ],
             isActive: true,
             inStock: true,

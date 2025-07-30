@@ -6,6 +6,31 @@
     margin-top: 6px;
     /* padding: 10px; */
     position: relative;
+    background-color: rgba(0,0,0, 0.4);
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 10px;
+  margin: 10px;
+  margin-right: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: aqua; 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(4, 182, 182); 
 }
 
 .cardsHoldingCon{
@@ -81,7 +106,6 @@
 }
 
 .pageContantBlock{
-    background-color: white;
     height: 100%;
     width: 100%;
     border-radius: 10px;
@@ -96,5 +120,92 @@
     /* max-height: 620px; */
     margin-top: auto;
     padding-bottom: 1rem;
+}
+
+
+.detailsPageMainBlock{
+    padding: 10px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    max-height: 100%;
+    overflow-y: auto;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    padding-bottom: 3rem;
+}
+
+.topMainBlock{
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.coverImageCon{
+    width: 50%;
+    height: 500px;
+    position: relative;
+    border-radius: 10px;
+    min-width: 500px;
+}
+
+.detailsPageCoverImage{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.topMainRightBlock{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.noteText{
+    margin-bottom: 1rem;
+    font-size: 26px;
+    padding: 0.5rem;
+    border-radius: 6px;
+    background-color: black;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-bottom: 2rem;
+}
+
+.breadCrum{
+    margin-bottom: 1rem;
+}
+
+.breadCrumText{
+    font-size: 22px;
+}
+
+.detailsHeading{
+    font-size: 44px;
+}
+
+.subHeading{
+    font-size: 38px;
+    margin-bottom: 1rem;
+}
+
+.detailsContantKey{
+    font-size: 28px;
+}
+
+.detailsContantValue{
+    color: aqua;
+}
+
+.pointsCon{
+    padding-left: 3rem;
+    margin-bottom: 2rem;
+}
+
+.bulletPoints{
+    font-size: 28px;
+    padding-bottom: 0.5rem;
 }
 
