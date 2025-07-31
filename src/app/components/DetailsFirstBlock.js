@@ -11,12 +11,12 @@ function DetailsFirstBlock({data}) {
         <div className={pageStyles.topMainBlock}>
             <div className={pageStyles.coverImageCon}>
                 <Image
-                className={pageStyles.detailsPageCoverImage}
-                src={coverImage}
-                aria-label={name}
-                alt={`${name} image`}
-                fill
-                title={name}
+                    className={pageStyles.detailsPageCoverImage}
+                    src={coverImage}
+                    aria-label={name}
+                    alt={`${name} image`}
+                    fill
+                    title={name}
                 />
             </div>
             <div className={pageStyles.topMainRightBlock}>

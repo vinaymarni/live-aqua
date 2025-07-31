@@ -4,20 +4,21 @@ import pageStyles from '../../../styles/page.module.css';
 import { usePathname } from 'next/navigation';
 import { getItemDetails } from '../../../static/commonData';
 import DetailsFirstBlock from '../../../components/DetailsFirstBlock';
+import ItemNotFound from '../../../components/ItemNotFound';
+import DetailsTable from '../../../components/DetailsTable';
 
 function page() {
     const path = usePathname();
     const routes = path.split("/");
     const keyName= routes[routes.length - 1];
     if(!getItemDetails.has(keyName)){
-      return <div>Sorry Data is not Available</div>
+      return <ItemNotFound />
     }
 
     const data = getItemDetails.get(keyName);
     
     const { note, precautions, requirements} = data;
 
-    console.log(data);
     return (
       <div className={`${pageStyles.mainBlock} ${pageStyles.detailsPageMainBlock}`}>
         <p className={pageStyles.breadCrum}>
@@ -49,9 +50,10 @@ function page() {
               <li key={`precautions_${ind}`} className={pageStyles.bulletPoints}>{eachP}</li>
             )
           })}
-        </ul>
+        </ul> 
 
-        
+        <h2 className={pageStyles.subHeading}>More Details</h2>
+        <DetailsTable />
 
 
 

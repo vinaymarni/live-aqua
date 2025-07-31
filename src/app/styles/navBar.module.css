@@ -7,11 +7,13 @@
 }
 
 .navBarTopCon{
-    background-color: aqua;
+    /* background-color: aqua; */
     padding-left: 1rem;
     padding-top: 1rem;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+    color: white;
+    background-color: black;
 }
 
 .navBarSubButtonsCon,
@@ -29,7 +31,9 @@
 
 .navBarSubButtonsCon{
     padding-top: 10px;
-    background-color: rgb(6, 229, 229);
+    background-color: rgb(5, 125, 125);
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .navBarButton{
@@ -42,6 +46,7 @@
     padding-right: 1rem;
     font-size: 22px;
     white-space: nowrap;
+    color: white;
 }
 
 .selectednavButton{
@@ -57,12 +62,14 @@
     padding-right: 1rem;
     font-size: 22px;
     white-space: nowrap;
+    color: white;
 }
 
 .selectednavSubTabButton{
     background-color: white;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+    color: black;
 }
 
 .navBarHeading{
