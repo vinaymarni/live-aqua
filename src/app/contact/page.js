@@ -14,12 +14,8 @@ function IconHolder({component}){
 } 
 function page() {
   const contactData = allSectionsData.get("contact");
-  console.log(contactData)
   return (
     <div className={pageStyles.mainBlock}>
-      <div className={contactStyles.contactBannerImageCon} style={{ backgroundImage: "url('/ocean-day.jpg')" }} >
-        <h1>Contact Us</h1>
-      </div>
       <div className={contactStyles.iconsHoldingCon}>
         <IconHolder component={<WatsappIcon onClick={()=>onRedirectTo(contactData.watsapp)} />} />
         <IconHolder component={<FaceBookIcon onClick={()=>onRedirectTo(contactData.faceBook)} />} />

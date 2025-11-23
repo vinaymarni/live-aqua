@@ -1,0 +1,98 @@
+.dashboardMainCon{
+    padding: 10px;
+    display: flex;
+
+}
+
+.cardsHoldingCon{
+
+}
+
+.leftSectionMainCon{
+    /* background-color: white; */
+    min-width: 200px;
+    height: 100%;
+    border-right: 1px solid white;
+    padding-right: 10px;
+}
+
+.leftSectionCard{
+    background-color: white;
+    border-radius: 10px;
+    padding: 6px;
+    min-height: 70px;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.leftSectionCard:hover{
+    box-shadow: inset 0 0 11px 4px rgba(0, 0, 0, 0.4);
+
+}
+
+.rightSectionMainCon{
+    padding: 10px;
+    max-height: 100%;
+    overflow-y: auto;
+}
+
+.selectedLeftSectionCard{
+    border: 4px solid blueviolet;
+
+}
+
+.sectionItemCard{
+    min-width: 100px;
+    max-width: 100px;
+}
+
+.sectionItemImageCon{
+    width: 100%;
+    height: 100px;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 6px;
+}
+
+.sectionItemImage{
+    width: 80%;
+    height: 80%;
+    transition: transform 0.4s ease;
+    transition-property: all;
+    transform: scale(1);
+    object-fit: contain;
+}
+
+.sectionItemImage:hover{
+    transform: scale(1.1);
+}
+.sectionCarItemdHeading{
+    font-size: 12px;
+    color: white;
+}
+
+.cardsSectionHeading{
+    color: white;
+    font-size: 20px;
+    margin-bottom: 10px;
+    margin-top: 1rem;
+}
+
+.rightSectionHeading{
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.leftSectionTitle{
+    color: white;
+    margin-bottom: 1rem;
+}

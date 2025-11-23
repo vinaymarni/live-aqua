@@ -30,16 +30,17 @@
 }
 
 .navBarSubButtonsCon{
-    padding-top: 10px;
+    padding: 6px;
     background-color: rgb(5, 125, 125);
     padding-left: 10px;
     padding-right: 10px;
+    max-width: calc(100% - 10px);
 }
 
 .navBarButton{
     background-color: transparent;
     border: none;
-    border-bottom: 6px solid rgb(110, 110, 110);
+    border-bottom: 2px solid rgb(110, 110, 110);
     font-weight: 600;
     padding: 4px;
     padding-left: 1rem;
@@ -51,6 +52,9 @@
 
 .selectednavButton{
     border-color: white;
+    background-color: #057d7d;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
 
 .navBarSubTabButton{
@@ -63,12 +67,11 @@
     font-size: 22px;
     white-space: nowrap;
     color: white;
+    border-radius: 30px;
 }
 
 .selectednavSubTabButton{
     background-color: white;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
     color: black;
 }
 
@@ -81,4 +84,43 @@
 .navBarPara{
     font-size: 16px;
     font-weight: 600;
+    margin-bottom: 10px;
+}
+
+
+@media only screen and (min-width: 601px) and (max-width: 1400px) {
+    .navBarHeading{
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    .navBarPara{
+        font-size: 14px;
+    }
+    
+    .navBarButton{
+        /* border-width: 4px; */
+        padding: 2px;
+        padding-left: 10px;
+        padding-right: 10px;
+        font-size: 18px;
+    }
+    
+    .navBarSubTabButton{
+        padding: 4px;
+        padding-left: 10px;
+        padding-right: 10px;
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .navBarHeading{
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    .navBarPara{
+        font-size: 12   px;
+    }
 }

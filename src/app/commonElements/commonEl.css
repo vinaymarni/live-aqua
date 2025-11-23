@@ -92,19 +92,14 @@
 
 
 
-
 @media only screen and (min-width: 600px) and (max-width: 1280px) {
     .cgDropDownContainer{
-        padding:13px;
+         padding:13px;
         padding-top: 6px;
         padding-bottom: 6px;
         margin-bottom:20px;
         margin-top: 5px;
-    }
-}
-
-@media only screen and (min-width: 600px) and (max-width: 1280px) {
-    .cgDropDownContainer{
+        
         margin-top: 5px;
 
         font-size: 18px;

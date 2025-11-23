@@ -1,6 +1,6 @@
 export const sections = [
     {title: "Home", name: "home", path: "/"}, 
-    {title: "Shop", name: "shop", path: "/shop"}, 
+    {title: "Shop", name: "shop", path: "/shop-now"}, 
     {title: "Gallery", name: "gallery", path: "/gallery"}, 
     {title: "About us", name: "about", path: "/about"}, 
     {title: "Contact", name: "contact", path: "/contact"}
@@ -12,8 +12,8 @@ export const allSectionsData = new Map([
         {name: "plants", title:"Plants", url: "/aquaPlant.jpg"},  
     ]],
     ["fishes", [
-        {name: "nonLiveBearer", title:"🥚 Non-Live Bearer"},
-        {name: "liveBearer", title:"🐠 Live Bearer"},
+        {name: "nonLiveBearer", title:"Non-Live Bearer"},
+        {name: "liveBearer", title:"Live Bearer"},
     ]],
     ["plants", [
         {name: "foreGroundPlants", title:"Fore Ground Plants"},

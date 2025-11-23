@@ -14,7 +14,9 @@ function Crad({eachOne}) {
         src={eachOne.url}
         aria-label={eachOne.title}
         alt={eachOne.title}
-        fill
+        // fill
+        height={200}
+        width={300}
         title={`Click to visit the page for more ${eachOne.title}`}
       />
       <div className={pageStyles.sectionCardContantCon}>
@@ -29,6 +31,8 @@ function page() {
 
   return (
     <div className={pageStyles.mainBlock}>
+      <h2 className={pageStyles.shopHeading}>Get your Accessories</h2>
+      <p className={pageStyles.shopPara}>get every thing to your home</p>
       <div className={pageStyles.cardsHoldingCon}>
         {allSectionsData.get("mainSections").map(eachOne=>{
           return(    

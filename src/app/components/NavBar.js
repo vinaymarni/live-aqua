@@ -27,6 +27,7 @@ function NavBar({tabs, tabsData, onTabChange}) {
             </div>
             <div className={Styles.navBarSubButtonsCon}>
                 {data.data.map(each => {
+                    if( each.name === "") return;
                     return(
                         <Button 
                             key={each.name}

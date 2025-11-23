@@ -8,6 +8,7 @@ function DetailsFirstBlock({data}) {
       type, lifeTime, maintenanceLevel, deliveryAvalibleIn
     } = data;
     return (
+        <>
         <div className={pageStyles.topMainBlock}>
             <div className={pageStyles.coverImageCon}>
                 <Image
@@ -15,7 +16,9 @@ function DetailsFirstBlock({data}) {
                     src={coverImage}
                     aria-label={name}
                     alt={`${name} image`}
-                    fill
+                    // fill
+                    width={300}
+                    height={200}
                     title={name}
                 />
             </div>
@@ -24,14 +27,19 @@ function DetailsFirstBlock({data}) {
                 <p className={pageStyles.detailsContantKey}>Type: <span className={pageStyles.detailsContantValue}>{type}</span></p>
                 <p className={pageStyles.detailsContantKey}>{desc}</p>
                 <p className={pageStyles.detailsContantKey}>price: <span className={pageStyles.detailsContantValue}>₹{minPrice} - ₹{maxPrice}/-</span></p>
-                <p className={pageStyles.detailsContantKey}>Avalible in <span className={pageStyles.detailsContantValue}>{avalibleSizes.join(", ")}</span> Sizes</p>
-                <p className={pageStyles.detailsContantKey}>Life Time: <span className={pageStyles.detailsContantValue}>{lifeTime}</span></p>
-                <p className={pageStyles.detailsContantKey}>Available Gender: <span className={pageStyles.detailsContantValue}>{availableGender === "M" ? "Male": availableGender === "F" ? "Female" : "Both Male & Female" }</span></p>
-                <p className={pageStyles.detailsContantKey}>Food Type: <span className={pageStyles.detailsContantValue}>{foodType}</span> </p>
-                <p className={pageStyles.detailsContantKey}>Maintenance: <span className={pageStyles.detailsContantValue}>{maintenanceLevel}</span></p>
-                <p className={pageStyles.detailsContantKey}>Delivery Avalible In: <span className={pageStyles.detailsContantValue}>{deliveryAvalibleIn.join(", ")}</span></p>
+                
             </div>
         </div>
+
+        <div className={pageStyles.priceDetailsBox}>
+                <p className={pageStyles.detailsContantBoxKey}>Avalible in: <span className={pageStyles.detailsContantBoxValue}>{avalibleSizes.join(", ")} Sizes</span></p>
+                <p className={pageStyles.detailsContantBoxKey}>Life Time: <span className={pageStyles.detailsContantBoxValue}>{lifeTime}</span></p>
+                <p className={pageStyles.detailsContantBoxKey}>Available Gender: <span className={pageStyles.detailsContantBoxValue}>{availableGender === "M" ? "Male": availableGender === "F" ? "Female" : "Both Male & Female" }</span></p>
+                <p className={pageStyles.detailsContantBoxKey}>Food Type: <span className={pageStyles.detailsContantBoxValue}>{foodType}</span> </p>
+                <p className={pageStyles.detailsContantBoxKey}>Maintenance: <span className={pageStyles.detailsContantBoxValue}>{maintenanceLevel}</span></p>
+                <p className={pageStyles.detailsContantBoxKey}>Delivery Avalible In: <span className={pageStyles.detailsContantBoxValue}>{deliveryAvalibleIn.join(", ")}</span></p>
+        </div>
+    </>
     )
 }
 

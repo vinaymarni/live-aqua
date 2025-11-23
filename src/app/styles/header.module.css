@@ -61,13 +61,29 @@
 }
 
 @media only screen and (min-width: 601px) and (max-width: 1400px) {
+    .headerMianCon{
+        padding: 4px;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
     .menuIconMainCon{
         display: none;
+    }
+
+    .logoImg{
+        height: 30px;
+        width: 30px;
+    }
+
+    .navLinksBtns{
+        font-size: 14px;
     }
 }
 
 @media screen and (max-width: 600px) {
     .headerMianCon{
+        padding: 4px;
         padding-left: 16px;
         padding-right: 16px;
     }
@@ -116,5 +132,10 @@
         animation: pulse 1s;
         box-shadow: 0 0 0 2em rgba(#fff,0);
         font-weight: 600;
+    }
+
+    .logoImg{
+        height: 30px;
+        width: 30px;
     }
 }

@@ -5,6 +5,7 @@ import Image from 'next/image';
 function DetailsTable() {
   return (
     <table className={styles.detailsTable}>
+        <tbody>
         <tr className={styles.tr}>
             <th className={`${styles.th} ${styles.staticFirstCol}`}>Category</th>
             <th className={styles.th}>Small</th>
@@ -69,6 +70,7 @@ function DetailsTable() {
             <td className={styles.td}>Yes</td>
             <td className={styles.td}>Yes</td>
         </tr>
+        </tbody>
     </table>
   )
 }

@@ -1,11 +1,11 @@
 "use client";
 import React from 'react'
-import pageStyles from '../../../styles/page.module.css';
+import pageStyles from '../../..//app/styles/page.module.css';
 import { usePathname } from 'next/navigation';
-import { getItemDetails } from '../../../static/commonData';
-import DetailsFirstBlock from '../../../components/DetailsFirstBlock';
-import ItemNotFound from '../../../components/ItemNotFound';
-import DetailsTable from '../../../components/DetailsTable';
+import DetailsFirstBlock from '../../../app/components/DetailsFirstBlock';
+import ItemNotFound from '../../..//app/components/ItemNotFound';
+import DetailsTable from '../../..//app/components/DetailsTable';
+import { getItemDetails } from '../../..//app/static/commonData';
 
 function page() {
     const path = usePathname();

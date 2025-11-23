@@ -15,18 +15,20 @@ function Crad({eachOne, category}) {
             key={eachOne.name} 
             className={pageStyles.sectionCard}
         >
-        <Image
-            className={pageStyles.sectionCardImage}
-            src={eachOne.url}
-            aria-label={eachOne.title}
-            alt={eachOne.title}
-            fill
-            title={`Click to visit the page for more ${eachOne.title}`}
-        />
-        <div className={pageStyles.sectionCardContantCon}>
-            <h2 className={pageStyles.sectionCardHeading}>{eachOne.title}</h2>
-            <button className={pageStyles.sectionCardButton}>Visit →</button>
-        </div>
+            <Image
+                className={pageStyles.sectionCardImage}
+                src={eachOne.url}
+                aria-label={eachOne.title}
+                alt={eachOne.title}
+                // fill
+                 height={200}
+        width={300}
+                title={`Click to visit the page for more ${eachOne.title}`}
+            />
+            <div className={pageStyles.sectionCardContantCon}>
+                <h2 className={pageStyles.sectionCardHeading}>{eachOne.title}</h2>
+                <button className={pageStyles.sectionCardButton}>Visit →</button>
+            </div>
         </div>
     )
 }
@@ -41,6 +43,7 @@ export default function Page() {
     const data = allSectionsData.get(key);
 
     useEffect(()=>{
+        console.log(data)
         setTabsData({ tab: key, subTab: data.data[0].name, data: data });
     }, [key, data]);
 

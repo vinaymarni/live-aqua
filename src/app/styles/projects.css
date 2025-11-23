@@ -1,0 +1,391 @@
+.projectCard{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 10px;
+    max-width: 372px;
+    box-shadow: 5px 10px 18px #888888;
+    font-family: Poppins;
+    min-width: 340px;
+    margin-bottom: 1rem;
+    min-height: 534px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    width: 100%;
+    padding: 4px;
+}
+
+.projectCard::before{
+  content: "";
+  position: absolute;
+  width: 200px;
+  height: 130%;
+  animation: animate 3s linear infinite;
+  transition: all .3s linear;
+  inset: -2px;
+  z-index: 0;
+  background: conic-gradient(from 0deg, #ff00c8, cyan, #ff00c8);
+  transform-origin: center center;
+  left: 20%;
+  top: -15%;
+}
+
+.projectCard::after{
+  content: "";
+  position: absolute;
+  inset: 5px;
+  background: white;
+  border-radius: 14px;
+  z-index: 1;
+}
+
+.projectCardConDark::after{
+  background: #363636;
+}
+
+.projectCard > * {
+  position: relative;
+  z-index: 2;
+}
+
+@keyframes animate{
+  from{
+    transform: rotate(0deg);
+  }
+  to{
+    transform: rotate(180deg);
+  }
+}
+
+.projectCardImgCon{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    height: 260px;
+    position: relative;
+    width: 100%;
+    z-index: 2;
+    background: transparent;
+    top: 0;
+    /* padding: 4px; */
+    padding-bottom: 0;
+  }
+
+.projectCardImg{
+    width: 100%;
+    height: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.projectCardBottomCon{
+    text-align: left;
+    padding: 1.7rem;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    /* margin: 4px; */
+    margin-top: 0;
+}
+
+.projectNameText{
+    font-size: 28px;
+    font-family: Poppins;
+    margin-bottom: 10px;
+}
+
+.projectContant{
+    color: #666666;
+    font-size: 18px;
+    margin-bottom: 1rem;
+}
+
+.projectTechStack{
+    font-size: 16px;
+    color: #666666;
+    margin-bottom: 1.5rem;
+}
+
+.projectTechStack span{
+    font-weight: 600;
+}
+
+.linksCon{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 1.7rem;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    z-index: 2;
+    background: transparent;
+    margin: 4px;
+    margin-top: 0;
+    width: calc(100% - 8px);
+}
+
+.cardLinksTag{
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+    color: black;
+}
+
+.cardLinksTag span{
+    text-decoration: underline;
+}
+
+.projectSwipeButton{
+  border: none;
+  background-color: transparent;
+  position: absolute;
+  top: 2rem;
+  right: 0;
+}
+
+.linksSvg{
+    height: 20px;
+    width: 20px;
+}
+
+.ProjectCardsCon{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 2rem;
+    transition-property: all;
+    transition-duration: 0.5s;
+}
+
+/* Cards Carousals block */
+.cardCarouselMainCon {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  width: 97%;
+  /* height: 100%; */
+  flex-direction: column;
+}
+ 
+.srcollButton {
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: #ffffff;
+  cursor: pointer;
+  width: 48px;
+  height: 48px;
+  bottom: 45%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.cardCarouselMainCon:hover .srcollButton {
+  opacity: 1;
+}
+
+.srcollButtonIcons {
+  width: 20px;
+  height: 20px;
+  stroke-width: 3px;
+  stroke: black;
+}
+
+/* left-[10px] md:left-[-40px] z-[10] rotate-180 */
+.srcollButtonLeft {
+  left: -25px;
+  z-index: 3;
+  transform: rotate(180deg);
+}
+
+/* right-[10px] md:right-[-40px] z-[10] */
+.srcollButtonRight {
+  right: -25px;
+  z-index: 2;
+}
+
+.cardsHoldingContainer {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  overflow-x: auto;
+  overflow-y: hidden;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  /* cursor: grab; */
+  scroll-behavior: smooth;
+  user-select: none;
+}
+
+.cardsHoldingContainer::-webkit-scrollbar {
+  display: none;
+}
+
+.cardsHoldingInnerContainer {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  /* height: 100%; */
+  max-width: 100%;
+  /* margin-bottom: 2rem; */
+}
+
+/* mt-[30px] !w-full md:!w-[96%] mx-auto md:mx-0 */
+.carouselOuterCon {
+  margin-top: 30px;
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.cardSkillBox{
+  display: flex; 
+  flex-direction: column;
+  justify-items: center;
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  z-index: 3;
+  gap: 8px;
+  padding: 2px;
+  border-radius: 4px;
+}
+
+.cardSkillBoxImage{
+  width: 20px;
+  height: 20px;
+}
+
+@media only screen and (min-width: 602px) and (max-width: 1600px) {
+  .slide {
+    height: 545px;
+  }
+  .controls {
+    margin-top: -2% !important;
+  }
+
+  /* mt-[30px] !w-full md:!w-[96%] mx-auto md:mx-0 */
+  .carouselOuterCon {
+    width: 98%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .linksCon,
+  .projectCardBottomCon{
+    padding: 10px;
+  }
+
+  .projectNameText{
+    font-size: 20px;
+  }
+
+  .projectCard{
+    max-width: 300px;
+    min-width: 270px;
+    min-height: 400px;
+  }
+
+  .projectCardImgCon{
+    height: 200px;
+  }
+
+  .ProjectCardsCon{
+    gap: 10px;
+  }
+
+  .projectContant{
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  .srcollButton {
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    bottom: 60%;
+  }
+
+  /* .cardsHoldingInnerContainer {
+    margin-bottom: 1rem;
+  } */
+}
+
+@media screen and (max-width: 601px) {
+  .slide {
+    height: 283px;
+  }
+
+  .indicator {
+    display: none;
+  }
+  .control {
+    height: 10px;
+    width: 10px;
+  }
+
+  .srcollButtonLeft {
+    left: 0px;
+  }
+
+  .srcollButtonRight {
+    right: 0px;
+  }
+
+  /* mt-[30px] !w-full md:!w-[96%] mx-auto md:mx-0 */
+  .carouselOuterCon {
+    width: 98%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .linksCon,
+  .projectCardBottomCon{
+    padding: 10px;
+  }
+
+  .projectNameText{
+    font-size: 18px;
+  }
+
+  .projectContant{
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+
+  .projectCard{
+    max-width: 300px;
+    min-width: 270px;
+    min-height: 400px;
+  }
+
+  .projectCardImgCon{
+    height: 200px;
+  }
+
+  .ProjectCardsCon{
+    gap: 10px;
+  }
+
+  /* .cardsHoldingInnerContainer {
+    margin-bottom: 1rem;
+  } */
+
+}
