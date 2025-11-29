@@ -10,13 +10,11 @@ import { usePathname, useRouter } from 'next/navigation';
 import Image from 'next/image';
 import CardsCarousal from '../commonElements/CardsCarousal';
 
-function Crad({eachOne, category, tab}) {
-    const path = usePathname();
-    const route = useRouter();
+function Crad({eachOne, category, tab, route}) {
     return (
         <div 
             // onClick={()=>route.push(`${path}/${tab}/${category}_${eachOne.name}`)} 
-            onClick={()=>route.push(`${path}/${category}_${eachOne.name}`)} 
+            onClick={()=>route.push(`/shop-now/${tab}/${category}_${eachOne.name}`)} 
             key={eachOne.name} 
             className={pageStyles.sectionItemCard}
         >
@@ -26,7 +24,6 @@ function Crad({eachOne, category, tab}) {
                   src={eachOne.url}
                   aria-label={eachOne.title}
                   alt={eachOne.title}
-                  // fill
                   height={250}
                   width={250}
                   title={`Click to visit the page for more ${eachOne.title}`}
@@ -46,6 +43,7 @@ function RightSection() {
     const types = allSectionsData.get(tab);
     const key = type ? type : types[0].name;
     const data = allSectionsData.get(key);
+    const route = useRouter();
 
     const onPage = () => {
       const inikey = types[0].name;
@@ -95,7 +93,13 @@ function RightSection() {
                         allCards={
                             cardsData.map(eachbj => {
                               return(
-                                  <Crad key={`card_${eachbj.name}_${each.name}`} tab={tab} eachOne={eachbj} category={each.name} />
+                                  <Crad 
+                                    key={`card_${eachbj.name}_${each.name}`} 
+                                    tab={tab} 
+                                    eachOne={eachbj} 
+                                    category={each.name} 
+                                    route={route}
+                                />
                               )
                             })
                         }
