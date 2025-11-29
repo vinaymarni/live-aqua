@@ -17,7 +17,7 @@
 }
 
 .leftSectionCard{
-    background-color: white;
+    /* background-color: white; */
     border-radius: 10px;
     padding: 6px;
     min-height: 70px;
@@ -27,6 +27,8 @@
     font-size: 20px;
     margin-bottom: 10px;
     cursor: pointer;
+    background-image: linear-gradient(to left, #87CEEB, #4682B4);
+    color: white;
 }
 
 .leftSectionCard:hover{
@@ -41,7 +43,7 @@
 }
 
 .selectedLeftSectionCard{
-    border: 4px solid blueviolet;
+    border: 3px solid white;
 
 }
 
@@ -53,12 +55,14 @@
 .sectionItemImageCon{
     width: 100%;
     height: 100px;
-    background-color: white;
+    /* background-color: white; */
     border-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
     margin-bottom: 6px;
+    background-image: radial-gradient( #87CEEB, #4682B4);
+
 }
 
 .sectionItemImage{

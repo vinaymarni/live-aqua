@@ -204,15 +204,9 @@ export const allSectionsData = new Map([
        call: `tel:+91${9701184115}`,
        faceBook: ""
     }],
-    ["contact", {
-       mobileNumber: "9701184115",
-       watsapp: `https://api.whatsapp.com/send?phone=+91${9701184115}&text=Hello Hari Prasad`,
-       youtube: "https://youtube.com/@liveaquariumtelugu?si=P0PozHvkaVtZsh2g",
-       instagram: "https://www.instagram.com/live_aquarium_telugu?igsh=M3U5MTRrb3doeDAz",
-       call: `tel:+91${9701184115}`,
-       faceBook: ""
-    }],
 ]);
+
+
 
 export const getItemDetails = new Map([
     ["goldFish_gold", 

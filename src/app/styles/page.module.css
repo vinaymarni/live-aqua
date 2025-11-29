@@ -125,6 +125,7 @@
     display: flex;
     gap: 2rem;
     margin-bottom: 2rem;
+    position: relative;
 }
 
 .coverImageCon{
@@ -330,6 +331,42 @@
 .sectionCardImage:hover{
     transform: scale(1.1);
 }
+
+.shearCon{
+  position: absolute;
+  bottom: 1rem;
+  right: 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.detailsWatsappButton{
+  background-color: white;
+  cursor: pointer;
+  padding: 6px;
+  color: green;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  gap: 4px;
+  border-radius: 30px;
+  padding-right: 10px;
+}
+
+.detailsWatsappIcon{
+    width: 26px;
+    height: 26px;
+}
+
+.detailsShareBtn{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+
 
 @media only screen and (min-width: 601px) and (max-width: 1400px) {
     .sectionCard{

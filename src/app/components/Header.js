@@ -22,13 +22,16 @@ function Header({}) {
   
   return (
     <div className={Styles.headerMianCon}>
-      <img 
-        src="/logo-circular.png" 
-        alt='Live Aquarium'
-        className={Styles.logoImg} 
-        title='Live Aquarium'
-        aria-label='Live Aquarium'
-      />
+      <div className={Styles.headerLogoBlock}>
+        <img 
+          src="/logo-circular.png" 
+          alt='Live Aquarium'
+          className={Styles.logoImg} 
+          title='Live Aquarium'
+          aria-label='Live Aquarium'
+        />
+        liveaquarium.com
+      </div>
 
       <div className={Styles.navLinks}>
         {sections.map(eachSection=>{

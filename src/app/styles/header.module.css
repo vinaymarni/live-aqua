@@ -8,6 +8,15 @@
     padding-right: 20px;
 }
 
+.headerLogoBlock{
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    gap: 4px;
+}
+
 .logoImg{
     height: 40px;
     width: 40px;

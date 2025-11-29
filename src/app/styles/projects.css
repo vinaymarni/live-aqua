@@ -175,6 +175,7 @@
   width: 97%;
   /* height: 100%; */
   flex-direction: column;
+  margin-left: 10px;
 }
  
 .srcollButton {
@@ -206,14 +207,14 @@
 
 /* left-[10px] md:left-[-40px] z-[10] rotate-180 */
 .srcollButtonLeft {
-  left: -25px;
+  left: -15px;
   z-index: 3;
   transform: rotate(180deg);
 }
 
 /* right-[10px] md:right-[-40px] z-[10] */
 .srcollButtonRight {
-  right: -25px;
+  right: -15px;
   z-index: 2;
 }
 

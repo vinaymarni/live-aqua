@@ -1,12 +1,20 @@
 import Image from 'next/image';
 import React from 'react';
 import pageStyles from '../styles/page.module.css';
+import { share, WatsappIcon } from '../static/svgs';
+import { allSectionsData, onRedirectTo } from '../static/commonData';
 
 function DetailsFirstBlock({data}) {
     const { 
       coverImage, name, desc, minPrice, maxPrice, availableGender, avalibleSizes, foodType, 
       type, lifeTime, maintenanceLevel, deliveryAvalibleIn
     } = data;
+    const contactData = allSectionsData.get("contact");
+    // const watsappContant = `https://api.whatsapp.com/send?phone=+91${contactData.mobileNumber}&text=${window.location.href}`
+
+    const message = `Hello Hari Prasad, Please check this page: \n${window.location.href}`;
+    const watsappContant = `https://api.whatsapp.com/send?phone=${contactData.mobileNumber}&text=${encodeURIComponent(message)}`;
+
     return (
         <>
         <div className={pageStyles.topMainBlock}>
@@ -29,6 +37,31 @@ function DetailsFirstBlock({data}) {
                 <p className={pageStyles.detailsContantKey}>price: <span className={pageStyles.detailsContantValue}>₹{minPrice} - ₹{maxPrice}/-</span></p>
                 
             </div>
+
+            <div className={pageStyles.shearCon}>
+                <button
+                    aria-label="share"
+                    name="share"
+                    title="share"
+                    onClick={(e) => {
+                        e.stopPropagation();
+                        navigator.share({ title: "page", url: window.location.href });
+                    }}
+                    className={pageStyles.detailsShareBtn}
+                >
+                    {share}
+                </button>
+                
+                <div className={pageStyles.detailsWatsappButton}>
+                    <WatsappIcon 
+                        className={pageStyles.detailsWatsappIcon}
+                        onClick={()=>onRedirectTo(watsappContant)} 
+                    />
+                    Contact
+                </div>
+            </div>
+           
+            
         </div>
 
         <div className={pageStyles.priceDetailsBox}>
