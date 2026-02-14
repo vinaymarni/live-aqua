@@ -6,7 +6,7 @@ import { useAtom } from 'jotai';
 import { allSectionsData } from '../static/commonData';
 import Button from '../commonElements/Button';
 import Styles from "../styles/navBar.module.css";
-import { usePathname, useRouter } from 'next/navigation';
+import { useRouter } from 'next/navigation';
 import Image from 'next/image';
 import CardsCarousal from '../commonElements/CardsCarousal';
 

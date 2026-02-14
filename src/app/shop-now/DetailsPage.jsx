@@ -33,25 +33,28 @@ function DetailsPage({itemKey}) {
         <DetailsFirstBlock data={data} />
 
         <p className={pageStyles.noteText}>{note}</p>
-
-        <h2 className={pageStyles.subHeading}>Basic Needs</h2>
-        <ul className={pageStyles.pointsCon}>
-          {requirements.map((eachP, ind)=>{
-            return(
-              <li key={`requirements_${ind}`} className={pageStyles.bulletPoints}>{eachP}</li>
-            )
-          })}
-        </ul>
-
-        <h2 className={pageStyles.subHeading}>Precautions</h2>
-        <ul className={pageStyles.pointsCon}>
-          {precautions.map((eachP, ind)=>{
-            return(
-              <li key={`precautions_${ind}`} className={pageStyles.bulletPoints}>{eachP}</li>
-            )
-          })}
-        </ul> 
-
+        <div className={pageStyles.pointsHoldingCon}>
+          <div>
+            <h2 className={pageStyles.subHeading}>Basic Needs</h2>
+            <ul className={pageStyles.pointsCon}>
+              {requirements.map((eachP, ind)=>{
+                return(
+                  <li key={`requirements_${ind}`} className={pageStyles.bulletPoints}>{eachP}</li>
+                )
+              })}
+            </ul>
+          </div>
+        <div>
+          <h2 className={pageStyles.subHeading}>Precautions</h2>
+          <ul className={pageStyles.pointsCon}>
+            {precautions.map((eachP, ind)=>{
+              return(
+                <li key={`precautions_${ind}`} className={pageStyles.bulletPoints}>{eachP}</li>
+              )
+            })}
+          </ul> 
+        </div>
+        </div>
         <h2 className={pageStyles.subHeading}>More Details</h2>
         <DetailsTable />
       </div>

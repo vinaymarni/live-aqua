@@ -126,6 +126,9 @@
     gap: 2rem;
     margin-bottom: 2rem;
     position: relative;
+    /* min-height: 100vh; */
+    flex-direction: row-reverse;
+        background-image: linear-gradient(#7b7979, #000);
 }
 
 .coverImageCon{
@@ -148,6 +151,7 @@
     flex-direction: column;
     gap: 10px;
     position: relative;
+
 }
 
 .noteText{
@@ -172,7 +176,7 @@
 }
 
 .detailsHeading{
-    font-size: 44px;
+    font-size: 54px;
 }
 
 .subHeading{
@@ -210,8 +214,8 @@
 }
 
 .pointsCon{
-    padding-left: 3rem;
-    margin-bottom: 2rem;
+    padding-left: 1.5rem;
+    
 }
 
 .bulletPoints{
@@ -366,6 +370,16 @@
     cursor: pointer;
 }
 
+.pointsHoldingCon{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    background-image: linear-gradient(to bottom, #7b7979, black);
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 2rem;
+}
+
 
 
 @media only screen and (min-width: 601px) and (max-width: 1400px) {
@@ -437,7 +451,7 @@
     }
 
     .bulletPoints{
-        font-size: 20px;
+        font-size: 18px;
         padding-bottom: 0.5rem;
     }
 }
@@ -473,5 +487,10 @@
     .subHeading{
         font-size: 24px;
         margin-bottom: 1rem;
+    }
+
+    .bulletPoints{
+        font-size: 16px;
+        padding-bottom: 0.5rem;
     }
 }
